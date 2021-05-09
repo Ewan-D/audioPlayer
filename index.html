@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>html5 audio player</title>
+
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<link rel="stylesheet" href="audioPlayer.css">
+		</head>
+		<body>
+				<div class="max-w-2xl mx-auto">
+				<h1 class="inline decoration-clone bg-black text-white px-2 text-4xl">Audio player for html5</h1>				<!--load up two tracks with the id of song and songB -->
+				<audio id="song"> <source src="" type="audio/mpeg"></audio> 
+				<audio id="songB"><source src="" type="audio/mpeg"></audio>
+				<!-- start of audioPlayer -->
+<div class="hidden sm:block"><!-- make it responsive -->
+<div class="flex border sm:border-t-1  border-b-0 border-gray-800 bg-blue-900">
+<!-- the tape itself -->
+<div id="tapeContainer" class="opacity-95 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500 rounded-lg">
+
+<img id="cover" src="img/cassetteTape.png" onclick="spin()"/>
+
+<div id="side">A</div>
+<div id="tapeInfo" class="text-lg">
+</div>
+
+<div id="wheelHolder">
+<div class="wheels">
+<div id="ltape" class="opacity-80">
+</div>
+<img id="wheelL" class="opacity-90" src="img/tapeWheel2.png" />
+</div>
+
+<div class="wheels">
+<div id="rtape" class="opacity-80">
+</div>
+<img id="wheelR" class="opacity-90" src="img/tapeWheel2.png"/>
+</div>
+</div>
+
+<ul id="controls" class="bg-blue-100 border rounded-lg mx-3 p-0.5">
+<li class="h-7 bg-black text-white px-2">_artist's name_</li>
+<li><div class="hidden mx-0.5 hover:bg-red-100 border-2 rounded-lg border-gray-700" onclick="spinTape()"><img src="img/spin.png"></div></li>
+</ul>
+</div>
+<!-- end of tape divs -->
+
+<!-- left side of the tape player feel free to add some animation or image etc here :) -->
+<div id="audioBox" class="flex flex-wrap content-end hidden sm:block bg-blue-900">
+</div>
+</div>
+</div>
+
+<!-- responsive controls -->
+<div class="flex justify-between sm:justify-end border border-t-0 border-black bg-gray-300 w-3xl p-2 text-lg leading-tight pr-4">
+<div class="flex">
+<div id="songStop" class=" h-7 border-2 border-t-0 border-l-0 mr-2 px-1 hover:bg-gray-200  border-black cursor-pointer text-center" onclick="stop('song')">stop <b>[/]</b></div>
+<div id="songPlay" class=" h-7 border-2 border-t-0 border-l-0 mr-2 px-1 border-black  hover:bg-gray-200 cursor-pointer text-center" onclick="play('song')">fwd <b>|></b></div>
+<div id="songPause" class=" h-7 border-2 border-t-0 border-l-0 mr-2 px-1 border-black sm:bg-yellow-500 hover:bg-gray-200 cursor-pointer text-center" onclick="pause('song')">pause <b>||</b></div>
+<div id="A/B" class="h-7 border-2 border-t-0 border-l-0 px-1 hover:bg-gray-200 border-black cursor-pointer text-center" onclick="spinTape()"><b>::</b> a/b <b>::</b></div>
+</div>
+<div class="flex">
+<div id="miniWheel" class="sm:hidden h-7 w-7 ml-2 rounded-full bg-black"><img src="img/cassette.png"></div>
+</div>
+</div>
+</div>
+
+<!-- cdn for the metadata api from a given track/song git hub repo is https://github.com/aadsm/jsmediatags -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsmediatags/3.9.5/jsmediatags.min.js"></script>
+<!-- start script for 'tape player' -->
+<script type="text/javascript" src="audioPlayer.js"></script>
+		</body>
+</html>

@@ -1,0 +1,88 @@
+body {
+	font-family: system-ui, sans-serif;
+	font-size: 18px;	
+}
+#cover {
+		z-index: 7;
+		position: absolute;
+}
+#wheelHolder {
+		display: flex;
+		justify-content: space-between;
+}
+.wheels {
+		margin-top:32px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height:240px;
+		width:240px;
+}
+#wheelL {
+		width: 64px;
+		border: 0 solid #000;
+		border-radius: 100%;
+		background-color: #000;
+        position: absolute;
+}
+#ltape {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 200px;
+		height: 200px;
+		border: 2px solid #000;
+		border-radius: 100%;
+		background-color: #000;
+}
+#wheelR {
+		width: 64px;
+		border: 0 solid #000;
+		border-radius: 100%;
+		background-color: #000;
+        position: absolute;
+}
+#rtape {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 200px;
+		height: 200px;
+		border: 2px solid #000;
+		border-radius: 100%;
+		background-color: #000;
+}
+#tapeInfo {
+		font-family: system-ui, sans-serif;
+		z-index: 10;
+		width: 480px;
+		position: absolute;
+		text-align: center;
+		margin-top: 46px;
+}
+#tapeContainer {
+    	z-index:4;
+		width: 480px;
+		height: 320px;
+		margin: 20px 20px;
+}
+ #audioBox {
+        height: 360px;
+        width: 134px;
+        float: right;
+        display: inline;
+ }
+#side {
+		z-index:8;
+		color: #000;
+		position: absolute;
+        margin-left: 21px;
+		padding: 30px;
+		font-size: 2.2em;
+}
+#controls{
+		list-style: none;
+		display: flex;
+		z-index: 12;
+		position: relative;
+        justify-content: center;
